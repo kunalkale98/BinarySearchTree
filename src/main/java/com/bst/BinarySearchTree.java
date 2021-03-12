@@ -37,4 +37,16 @@ public class BinarySearchTree {
             inorderNew(root.right);
         }
     }
+
+    public int size(){
+        return sizeNew(this.root);
+    }
+
+    public int sizeNew(Node root){
+        if(root == null){
+            return 0;
+        }
+        else
+            return(sizeNew(root.left) + sizeNew(root.right) + 1);
+    }
 }
